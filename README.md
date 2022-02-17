@@ -104,3 +104,15 @@ The representation **sent to the server** _could_ look like the following:
   ]
 }
 ```
+
+```
+npm i -D knex-cleaner nodemon
+npm i -D eslint
+
+npm i express sqlite3 knex
+npm i dotenv
+
+W42D4
+Data Modeling
+https://bloomtech-1.wistia.com/medias/hlle9o4z0x
+```
