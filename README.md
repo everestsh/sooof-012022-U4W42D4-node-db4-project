@@ -112,6 +112,12 @@ npm i -D eslint
 npm i express sqlite3 knex
 npm i dotenv
 
+touch .env index.js
+mkdir  api ; touch api/server.js
+mkdir  api/recipes ; cd api/recipes ; touch recipes-middleware.js recipes-model.js recipes-router.js; cd ../..
+
+
+
 W42D4
 Data Modeling
 https://bloomtech-1.wistia.com/medias/hlle9o4z0x
