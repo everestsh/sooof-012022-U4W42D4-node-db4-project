@@ -104,3 +104,33 @@ The representation **sent to the server** _could_ look like the following:
   ]
 }
 ```
+```
+npm i -D knex-cleaner nodemon
+npm i -D eslint
+
+npm i express 
+npm install knex@0.95.15 sqlite3
+npm i dotenv
+
+touch .env index.js
+mkdir  api ; touch api/server.js
+mkdir  api/recipes ; cd api/recipes ; touch recipes-middleware.js recipes-model.js recipes-router.js; cd ../..
+
+
+npx knex init ###[Created ./knexfile.js]
+touch knexfile.js
+mkdir data; cd data ; touch db-config.js; cd ..;
+cd data; mkdir migrations seeds; cd migrations; touch 01-recipes_book-table.js ; cd ../seeds/; touch 01-cleanup.js 02-recipes_book.js; cd ../..;
+
+npx knex migrate:make 01-recipes_book-table.js
+npx knex migrate:up 
+npx knex migrate:down
+npx knex migrate:latest
+npx knex migrate:rollback
+npx knex seed:make 01-init_recipes.js
+
+W42D4
+Data Modeling
+https://bloomtech-1.wistia.com/medias/hlle9o4z0x
+
+```
