@@ -120,7 +120,8 @@ mkdir  api/recipes ; cd api/recipes ; touch recipes-middleware.js recipes-model.
 
 npx knex init ###[Created ./knexfile.js]
 touch knexfile.js
-mkdir data; cd data ; touch db-config.js; cd ..
+mkdir data; cd data ; touch db-config.js; cd ..;
+cd data; mkdir migrations seeds; cd migrations; touch 01-recipes_book-table.js ; cd ../seeds/; touch 01-cleanup.js 02-recipes_book.js; cd ../..;
 
 npx knex migrate:make 01-recipes_book-table.js
 npx knex migrate:up 
