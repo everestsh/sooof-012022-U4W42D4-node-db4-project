@@ -1,4 +1,13 @@
 const router = require('express').Router()
+const mw = require('./recipes-middleware')
+
+router.use("/:id",mw.checkRecipesId, async (req, res, next)=>{
+    try{
+        res.json(req.recipe)
+    }catch(err){
+        next(err)
+    }
+})
 
 router.use("*", (req, res)=>{
     res.json({api: "up"})
