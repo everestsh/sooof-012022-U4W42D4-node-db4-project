@@ -117,6 +117,8 @@ mkdir  api ; touch api/server.js
 mkdir  api/recipes ; cd api/recipes ; touch recipes-middleware.js recipes-model.js recipes-router.js; cd ../..
 
 
+npx knex init ###[Created ./knexfile.js]
+mkdir data; cd data ; touch db-config.js
 
 W42D4
 Data Modeling

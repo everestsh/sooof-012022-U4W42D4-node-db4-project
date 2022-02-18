@@ -3,6 +3,7 @@ const mw = require('./recipes-middleware')
 
 router.use("/:id",mw.checkRecipesId, async (req, res, next)=>{
     try{
+        // throw new Error('ARRRR')
         res.json(req.recipe)
     }catch(err){
         next(err)
