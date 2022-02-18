@@ -7,6 +7,7 @@
     "migrate": "knex migrate:latest",
     "rollback": "knex migrate:rollback",
     "seed": "knex seed:run",
+    "cleanup": "knex seed:run --specific=01-cleanup.js",
     "resetdb": "knex migrate:rollback && knex migrate:latest && knex seed:run"
   },
   "repository": {
@@ -21,7 +22,7 @@
   "dependencies": {
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
-    "knex": "^1.0.3",
+    "knex": "^0.95.15",
     "sqlite3": "^5.0.2"
   }
 }

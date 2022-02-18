@@ -109,7 +109,8 @@ The representation **sent to the server** _could_ look like the following:
 npm i -D knex-cleaner nodemon
 npm i -D eslint
 
-npm i express sqlite3 knex
+npm i express 
+npm install knex@0.95.15 sqlite3
 npm i dotenv
 
 touch .env index.js
@@ -118,7 +119,15 @@ mkdir  api/recipes ; cd api/recipes ; touch recipes-middleware.js recipes-model.
 
 
 npx knex init ###[Created ./knexfile.js]
-mkdir data; cd data ; touch db-config.js
+touch knexfile.js
+mkdir data; cd data ; touch db-config.js; cd ..
+
+npx knex migrate:make 01-recipes_book-table.js
+npx knex migrate:up 
+npx knex migrate:down
+npx knex migrate:latest
+npx knex migrate:rollback
+npx knex seed:make 01-init_recipes.js
 
 W42D4
 Data Modeling
